@@ -10,15 +10,13 @@ function Container() {
 
   const { dataSource } = useSelector((state) => state);
 
-  useEffect(() => {
-    const fetchStudents = async () => {
-      const students = await axios.get("http://localhost:3000/students");
-      setDataSource(students.data);
-    };
-    fetchStudents();
-  }, []);
-
-  console.log(dataSource);
+  // useEffect(() => {
+  //   const fetchStudents = async () => {
+  //     const students = await axios.get("http://localhost:3000/students");
+  //     setDataSource(students.data);
+  //   };
+  //   fetchStudents();
+  // }, []);
 
   const columns = [
     {
@@ -44,7 +42,7 @@ function Container() {
   ];
 
   function onClick() {
-    dispatch(fetchStudents());
+    dispatch(fetchStudents(dataSource));
   }
 
   return (

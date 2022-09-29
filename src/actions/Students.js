@@ -1,5 +1,6 @@
-export function fetchStudents() {
-  {
-    type: "FETCH_STUDENTS";
-  }
+export function fetchStudents(dataSource) {
+  return {
+    type: "FETCH_STUDENTS",
+    payload: dataSource,
+  };
 }
