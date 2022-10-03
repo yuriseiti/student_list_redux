@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import fetchReducer from "../reducers/Students";
+import studentsReducer from "../reducers/Students";
 
 export default configureStore({
   reducer: {
-    students: fetchReducer,
+    students: studentsReducer,
   },
 });
